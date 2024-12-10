@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct element {
+    int val;
+    struct element *suivant;
+} element;
+element* creerListe() {
+    return NULL;
+}
+element* chargerListe(int tab[], int n, element* liste) {
+    return liste;
+}
+void afficherListe(element* liste) {
+}
+element* supprimerEnFin(element* liste) {
+    return liste;
+}
+element* ajouterEnDebut(element* liste, int valeur) {
+    return liste;
+}
+void viderListe(element* liste) {
+}
+int main() {
+    int Tab[10] = {1, 3, 5, 7, 8, 10, 9, 11, 13, 20};
+    element *liste = creerListe();
+    liste = chargerListe(Tab, 10, liste);
+    afficherListe(liste);
+    element *L1 = supprimerEnFin(liste);
+    afficherListe(L1);
+    element *L2 = ajouterEnDebut(L1, 40);
+    afficherListe(L2);
+    viderListe(L2);
+    return 0;
+}
