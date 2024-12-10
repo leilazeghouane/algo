@@ -1,48 +1,61 @@
 #include<stdio.h>
-int main () {
-int matrix [5][5];
 
-for(int i=0;i<5;i++)
-{
-      for(int j =0;j<5;j++)
-    {
-        printf ("%c" ,matrix [i][j]);
-        printf ("/n");
-    }  
-}
-for(i=0;i<5;i++)
-    {
-        for(j=0;j<5;j++)
-        if(i%2=0)
-        {
-              printf ("%c /t"; matrix [i][j]);
-              printf ("/n");
+int main() {
+    int matrix[5][5];
+
+    // Remplir la matrice avec des valeurs de 1 à 25 comme exemple
+    int value = 1;
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            matrix[i][j] = value++;
         }
-   }
-for(i=0;i<5;i++)
-{
-     for(j=0;j<5;j++)
-     if (i%2!=0)
-    {
-         printf ("%c "; matrix [i][j]);
-         printf ("/n");
     }
-}
-for(i=0;i<5;i++)
-{
-     for(j=0;j<5;j
-    if(i=j)
-    {
-        printf ("%c"; matrix [i][j]);
-        printf ("/n");
+
+    // Afficher toutes les valeurs de la matrice
+    printf("La matrice complète:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
     }
-for(i=0;i<5;i++)
-{
-     for(j=0;j<5;j++)
-     if(i+j=n_1)
-     {
-           printf ("%c /t"; matrix [i][j]);
-           printf ("/n");
-     }
- return 0;
+
+    // Afficher les valeurs des lignes paires
+    printf("\nLes valeurs des lignes paires:\n");
+    for (int i = 0; i < 5; i++) {
+        if (i % 2 == 0) {
+            for (int j = 0; j < 5; j++) {
+                printf("%d\t", matrix[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    // Afficher les valeurs des lignes impaires
+    printf("\nLes valeurs des lignes impaires:\n");
+    for (int i = 0; i < 5; i++) {
+        if (i % 2 != 0) {
+            for (int j = 0; j < 5; j++) {
+                printf("%d\t", matrix[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    // Afficher la diagonale principale
+    printf("\nLes valeurs sur la diagonale principale:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d\t", matrix[i][i]);
+    }
+    printf("\n");
+
+    // Afficher la diagonale secondaire
+    printf("\nLes valeurs sur la diagonale secondaire:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d\t", matrix[i][4 - i]);
+    }
+    printf("\n");
+
+    return 0;
 }
+ 
